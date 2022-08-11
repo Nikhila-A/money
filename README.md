@@ -13,4 +13,4 @@ I want to model money which can be expressed in *Rupees*, *paise* or a combinati
 
 To run the test
 
-    go test
+    $ go test
