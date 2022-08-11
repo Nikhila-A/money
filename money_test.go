@@ -6,7 +6,7 @@ import (
 )
 
 func TestNewMoney(t *testing.T) {
-	t.Run("check initialization of money", func(t *testing.T) {
+	t.Run("check whether money is initialized", func(t *testing.T) {
 		assert.IsType(t, Money{}, NewMoney(29))
 	})
 
@@ -30,7 +30,7 @@ func TestNewMoney(t *testing.T) {
 }
 
 func TestAddMoney(t *testing.T) {
-	t.Run("check value when paise is negative", func(t *testing.T) {
+	t.Run("check whether the money is correct when paise is negative", func(t *testing.T) {
 		assert.Panics(t, func() {
 			money := NewMoney(5)
 			money.AddMoney(-8)
@@ -38,7 +38,7 @@ func TestAddMoney(t *testing.T) {
 	})
 
 	money := NewMoney(1000)
-	t.Run("check value when paise is positive", func(t *testing.T) {
+	t.Run("check whether the money is correct when paise is positive", func(t *testing.T) {
 		money.AddMoney(120)
 		assert.Equal(t, 1120, money.paise)
 	})
