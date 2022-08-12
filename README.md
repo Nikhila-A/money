@@ -8,9 +8,11 @@ I want to model money which can be expressed in *Rupees*, *paise* or a combinati
 ## Environment
 
 * go version go1.19 darwin/amd64
+* testify v1.8.0
 
 ## Test Instructions
 
 To run the test
 
     $ go test
+    
